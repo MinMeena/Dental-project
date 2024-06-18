@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        </div>
+
+        <style>
+            form {
+                border: 1px solid #131313;
+                margin: 10% 35%;
+                border-radius: 5px;
+            }
+
+            .f1 {
+
+                margin: 2% 35%;
+
+            }
+
+            input[type=text],
+            input[type=mail],
+            input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: rgb(238, 158, 53);
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                border-radius: 5px;
+
+            }
+
+            .g_id_signin {
+                margin: 2% 35%;
+            }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+            .container {
+                padding: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <form class="f2" action="userLogin.jsp" method="POST">
+            <div class="container">
+                <h4 class="text-center" style="font-family:verdana;">USER LOGIN</h4>
+                <label for="name" style="font-family:verdana;"><b>ENTER THE USERNAME</b></label>
+                <input type="mail" placeholder="Enter username" name="username" id="username" required>
+                <label for="pass" style="font-family:verdana;"><b>PASSWORD</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" id="pass" required>
+                <button type="submit" style="font-family:verdana;">SUBMIT</button>
+            </div>
+        </form>
+        <form class="f1" action="userRegister.html" method="POST">
+            <button type="submit" style="font-family:verdana;">REGISTER</button>
+        </form>
+    </body>
+
+
+
+    </html>
