@@ -21,7 +21,7 @@
             }
         else
         {
-        ResultSet rs=stmt.executeQuery("select * from employee");
+        ResultSet rs=stmt.executeQuery("select * from user");
         int f=0;
         while(rs.next())
         {
@@ -32,8 +32,8 @@
           
             if(uname1!=null && uname1.equals(uname) && pass1.equals(upass))
             {   
-                session.setAttribute("uid", rs.getInt("eno"));
-                out.println("user login="+rs.getInt("eno"));
+                session.setAttribute("uid", rs.getInt("userid"));
+                out.println("user login="+rs.getInt("userid"));
                 f=1;
             } 
             
