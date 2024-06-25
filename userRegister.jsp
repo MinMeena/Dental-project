@@ -14,8 +14,15 @@
                         HttpSession session=request.getSession();
                         String uname=request.getParameter("username");
                         String upass=request.getParameter("pass");
-                        ResultSet rs=stmt.executeQuery("select count(userid) as count from user");
                         int count=1;
+                        ResultSet rs1=stmt.executeQuery("select * from user where username='" + uname + "'");
+                    if(rs1.next()){ 
+                        out.println("<meta http-equiv='refresh' content='3;URL=userRegister.html'>");//redirects after 3 seconds
+                        out.println("<p style='color:red;'>User already exist!</p>");
+                    }
+                    else
+                    {
+                        ResultSet rs=stmt.executeQuery("select count(userid) as count from user");
                         if(rs.next())
                         {
                             count=rs.getInt("count")+1;
@@ -27,7 +34,9 @@
                         ps.setString(2,uname);
                         ps.setString(3,upass);
                         int updateQuery = ps.executeUpdate();
-                        response.sendRedirect("login.html");
+                        response.sendRedirect("userLogin.html");
+                    }
+                   
                         
                     }
                     catch(Exception e)
